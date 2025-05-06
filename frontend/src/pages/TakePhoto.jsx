@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import WebCam from '../components/WebCam';
 import "./takephoto.css"
 import { useAppContext } from '../components/GlobalVariable';

@@ -1,8 +1,6 @@
-import Navbar from "../components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home"
 import TakePhoto from "./TakePhoto";
-import About from "./About";
 import AccessCam from "./AccessCam";
 import "./app.css"
 import SetImageToDownload from "./SetImageToDownload";

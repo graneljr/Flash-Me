@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
   const [filter, setFilter] = useState("none");
   const [permissionGranted, setPermissionGranted] = useState(false);
   const [frameColor, setFrameColor] = useState("")
-  const [stickers , setStickers] = useState([]);
+
   const [hashtags, setHashtags] = useState([]);
   
   useEffect(() => {
@@ -19,7 +19,7 @@ export const AppProvider = ({ children }) => {
     setPermissionGranted(saved === "true");
   },[]) 
   return (
-    <GlobalVar.Provider value={{ imageCount, started, countdown,setCountdown,setStarted ,setImageCount ,image,setImage , filter,setFilter, permissionGranted, setPermissionGranted, frameColor, setFrameColor, stickers, setStickers , hashtags, setHashtags}}>
+    <GlobalVar.Provider value={{ imageCount, started, countdown,setCountdown,setStarted ,setImageCount ,image,setImage , filter,setFilter, permissionGranted, setPermissionGranted, frameColor, setFrameColor, hashtags, setHashtags}}>
       {children}
     </GlobalVar.Provider>
   );

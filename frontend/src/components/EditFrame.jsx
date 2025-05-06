@@ -1,13 +1,7 @@
-import smile1 from "../images/smiley-4832492_640-removebg-preview.png"
-import smile2 from "../images/smiley-4832465_640-removebg-preview.png"
-import smile3 from "../images/smiley-4836188_640-removebg-preview.png"
-import shocked1 from "../images/smiley-4883983_640-removebg-preview.png"
-import shocked2 from "../images/smiley-4832483_640-removebg-preview.png"
-import shocked3 from "../images/smiley-4832519_640-removebg-preview.png"
 
 import { useState} from "react";
 import DownloadBtn from "./DownloadBtn"
-const EditFrame = ({setFrameColor, setStickers,setHashtags, hashtags,frameRef ,className}) => {
+const EditFrame = ({setFrameColor, setHashtags, hashtags,frameRef ,className}) => {
   const [hashtag, setHashtagsValue] = useState("");
     const colors = [
         "#FFB5E8", // Baby Pink
@@ -21,9 +15,6 @@ const EditFrame = ({setFrameColor, setStickers,setHashtags, hashtags,frameRef ,c
         "#C4FAF8", // Frost Aqua
         "#FFFFD1", // Butter Yellow
       ];
-      const laughter = [smile1, smile2, smile3]
-      const shocked = [shocked1, shocked2, shocked3]
-
       const getValue = (e) => {
         setHashtagsValue(e.target.value);
       }
@@ -57,14 +48,7 @@ const EditFrame = ({setFrameColor, setStickers,setHashtags, hashtags,frameRef ,c
     ))}
   </div> 
     </div>
-      <div className="w-full flex flex-col small-screen:w-[90%] h-auto items-center justify-center gap-y-4">
-        <p className="text-gray-600 mb-4">Stickers</p>
-        <div className="grid grid-cols-3 gap-4 items-center  justify-items-center">
-          <button onClick={()=> setStickers("")} className="!p-[15px] small-screen:!p-[7px] text-red-500 bg-white transition-all ease-in-out hover:bg-red-500 rounded-[7px] font-bold hover:text-white duration-500">Default</button>
-            <img src={smile1} onClick={()=> setStickers(laughter)} className="w-1/2 h-full rounded-[15px] block " alt=""/>
-            <img src={shocked1} onClick={()=> setStickers(shocked)} className="w-1/2 h-full rounded-[15px] block " alt=""/>
-        </div>
-      </div>
+    
       <div className="w-full flex small-screen:w-[90%] h-auto flex-col items-center justify-center gap-y-4 !mb-[15px]">
         <p className="text-gray-600 mb-4">Add Hashtags</p>
         <input type="text" name="hashtag" className="small-screen:w-[80%] h-[50px]  rounded-[7px] border-2 border-gray-300 focus:outline-none focus:border-blue-500 !px-4" value={hashtag} onChange={getValue}/>  
