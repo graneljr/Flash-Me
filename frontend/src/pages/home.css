@@ -1,0 +1,66 @@
+.slideInImage-and-OutImage {
+  animation: 
+  slideIn 3s ease forwards, 
+  slideOut 2s ease forwards 3s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.letter-animation::after{
+  content: "|";
+  animation: typing ease-in-out 1s infinite;
+} 
+@keyframes typing {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+
+.slide-in-animation{
+  animation: slide-in ease forwards 2s;
+}
+
+@keyframes slide-in{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.btn-slide-in-animation{
+  animation: btn-slide-in ease forwards 2s 2s;
+}
+
+@keyframes btn-slide-in{
+  0%{
+    transform: translateY(100%);
+  }100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
