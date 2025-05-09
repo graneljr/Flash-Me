@@ -19,19 +19,19 @@ const ImagePreview = forwardRef(({ image, frameColor, hashtags }, ref) => {
         className={`
           flex flex-col gap-6 items-center w-[75%] !py-[35px]
           h-auto
-          max-[320px]:h-[60svh]
-          max-[400px]:h-[65svh]
-          max-[600px]:h-[70svh]
+          max-[320px]:h-[65svh]
+          max-[400px]:h-[70svh]
+          max-[800px]:h-[75svh]
         `}
       >
         {image.map((img) => (
           <div
             key={img}
-            className="rounded w-full overflow-hidden flex items-center justify-center relative h-full max-h-[60svh]"
+            className="rounded w-full overflow-hidden flex items-center justify-center relative h-full"
           >
             <img
               src={img}
-              className="object-contain w-full h-full max-h-full"
+              className=" w-full h-full max-h-full object-contain"
               alt="preview"
             />
           </div>
